@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify # type: ignore
 import retrieve_generate 
 import feed_llm_generate
 
@@ -36,4 +36,3 @@ def main():
 
 if __name__ == "__main__":
     app.run()
-    main() 
