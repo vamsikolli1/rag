@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment 
+metadata: 
+  name: rag-deployment
+spec: 
+  replicas: 2
+  selector:
+    matchlabels: 
+      app: rag 
+  template:
+    metadata:
+      labels:
+        app: rag
+    spec:
+      containers:
+      - name: rag
+        image: rag_docker:latest
+        ports:
+        - containerPort: 80
+        
+
